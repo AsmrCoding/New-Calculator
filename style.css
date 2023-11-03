@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nova+Mono&family=Russo+One&display=swap');
+
+body{
+    background-color: #00304b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    width: 510px;
+    background: #afa996;
+    padding: 20px;
+}
+.window{
+    position: relative;
+    width: 470px;
+    height: 126px;
+    background: #8a8269;
+    border-radius: 6px;
+}
+
+.result{
+    overflow: hidden;
+    z-index: 100;
+    position: absolute;
+    background-color: #171717;
+    width: 470px;
+    height: 110px;
+    border-radius: 6px;
+    transform: perspective(120px) rotateX(-10deg);
+    transform-origin: top;
+}
+
+.result input {
+    font-family: 'Nova Mono',monospace;
+}
+
+.readout, .place-hold {
+    position: absolute;
+    text-align: right;
+    left: -50px;
+    width: 470px;
+    height: 110px;
+    font-size: 46px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #09ff88;
+}
+.readout::placeholder, .place-hold::placeholder {
+    color: rgba(9, 255, 136, 0.1);
+}
+
+.plane {
+    z-index: 90;
+    position: absolute;
+    bottom: 0;
+    background: #a29b85;
+    width: 470px;
+    height: 110px;
+    border-radius: 6px;
+    transform: perspective(42px) rotateX(10deg);
+    transform-origin: bottom;
+}
+
+.section{
+    background: #000;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 2px;
+    border-radius: 2px;
+    vertical-align: top;
+}
+
+.one{
+    width: 68px;
+    margin-right: 20px;
+}
+
+.two{
+    width: 207px;
+}
+
+.three{
+    width: 136px;
+    float: right;
+}
+
+button{
+    margin: 3px;
+    vertical-align: top;
+    cursor: pointer;
+    display: inline-block;
+    background: #343536;
+    border: none;
+    transition: all .1s;
+    width: 62px;
+    height: 62px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, .3),
+    inset 0 1px 3px rgba(255, 255, 255, .3);
+}
+.two button, .three button {
+    margin-right: 0;
+}
+button:hover{
+    box-shadow: inset 0 4px 5px rgba(0, 0, 0, .3)
+}
+
+.key_red{
+    background: #db4343;
+}
+
+.key-long{
+    width: 131px;
+    height: 62px;
+}
+
+.key-vertical{
+    width: 66px;
+    height: 131px;
+    float: right;
+    margin-left: 0;
+}
+button > div {
+    display: inline-block;
+    color: #fff;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 12px;
+    background: linear-gradient(top,#343536 0%, #484b4d 100%);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .75),
+    inset 0 0 3px rgba(0, 0, 0, .3),
+    inset 0 1px 3px rgba(255, 255, 255, .3);
+}
+.key-before-long{
+    width: 110px;
+}
+.key-before-vertical{
+    box-sizing: border-box;
+    height: 110px;
+    padding-top: 30px;
+}
+.key_before_red{
+    background: linear-gradient(top,#db4343 0%, #f06d6d 100%);
+    box-shadow: 0 5px 5px rgba(115, 32, 32, .75),
+    inset 0 0 3px rgba(154, 48, 48, .3),
+    inset 0 1px 3px rgba(255, 255, 255, .3);
+}
+
+.top-part, .btm-part{
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+.btm-part{
+    height: 40px;
+    background:#8a8269 ;
+    bottom: -40px;
+    border-radius: 0 0 10px 10px;
+    transform: perspective(200px) rotateX(-10deg);
+    transform-origin: top;
+}
+
+.top-part {
+    height: 140px;
+    background:#999179 ;
+    top: -140px;
+    border-radius: 10px 10px 0 0;
+    transform: perspective(300px) rotateX(10deg);
+    transform-origin: bottom;
+}
+
+a {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 12px;
+    font-family: 'Russo One',sans-serif;
+    position: absolute;
+    color: #625c4a;
+    bottom: 0;
+}
+.btm-part a {
+    color: red;
+    font-size: 20px;
+    padding: 10px;
+}

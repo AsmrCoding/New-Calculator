@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ASMR Coding | Calculator</title>
+</head>
+<body>
+    <div class="calc" ng-app="appleCalculator" ng-controller="Calculator">
+        <div class="top-part">
+            <a href="https://www.youtube.com/@ASMRcodingPRO">ASMR Coding C3-22</a>
+        </div>
+        <div class="window">
+            <div class="result">
+                <input readonly disabled ng-model="console" maxlength="10" class="readout">
+                <input type="readonly" class="place-hold" disabled placeholder="0000000000000000">
+            </div>
+            <div class="plane"></div>
+        </div>
+        <div class="section one">
+            <button ng-click="clearTotal()"><div>MC</div></button>
+            <button><div>M+</div></button>
+            <button><div>MR</div></button>
+            <button class="key_red" ng-click="clearTotal()"><div class="key_before_red">Mx</div></button>
+        </div>
+        <div class="section two">
+            <button ng-click="print(7)"><div>7</div></button>
+            <button ng-click="print(8)"><div>8</div></button>
+            <button ng-click="print(9)"><div>9</div></button>
+            <button ng-click="print(4)"><div>4</div></button>
+            <button ng-click="print(5)"><div>5</div></button>
+            <button ng-click="print(6)"><div>6</div></button>
+            <button ng-click="print(1)"><div>1</div></button>
+            <button ng-click="print(2)"><div>2</div></button>
+            <button ng-click="print(3)"><div>3</div></button>
+            <button ng-click="print(0)" class="key-long"><div class="key-before-long">0</div></button>
+            <button ng-click="print('.')"><div>.</div></button>
+        </div>
+        <div class="section three">
+            <button ng-click="add()"><div>+</div></button>
+            <button ng-click="getPercentage()"><div>%</div></button>
+            <button ng-click="subtract()"><div>-</div></button>
+            <button ng-click="changePositivity()"><div>/-/</div></button>
+            <button ng-click="equal()" class="key-vertical"><div class="key-before-vertical">=</div></button>
+            <button ng-click="multiply()"><div>×</div></button>
+            <button ng-click="divide()"><div>÷</div></button>
+        </div>
+        <div class="btm-part">
+            <a href="https://www.youtube.com/@ASMRcodingPRO">Please Like & Subscribe</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-ie8-build/1.3.20/angular.min.js" integrity="sha512-Q0K4ZvRzeYTatSJnS5wjzcs9mzlkKotLInm6SjyjKKVfaV4P8f37yyPncw3TKI4LXswdP9lRxrGIXURFVTfi7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
